@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Serif:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "SearchIkonica.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autobuske linije opštine Travnik</title>
+</head>
+<body>
+    <style>
+        body{
+            background: #22223a;
+        }
+
+        .fx{
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -8px;
+            margin-right: -8px;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .Kontejneri{
+            padding-left: 8px;
+            padding-right: 8px;
+            background: #3c3957;
+            width: 570px;
+            height: 300px;
+            display: flex;
+            transition: 0.4s;
+            margin: 20px;
+            color: azure;
+            border-radius: 7px;
+            box-shadow: 10px 10px #0d0911;
+        }
+
+        .Kontejneri:hover{
+            width: 580px;
+            height: 315px;
+            box-shadow: 25px 25px #0b0611;
+        }
+
+        .slike{
+            width: 250px;
+            height: 100%;
+            margin-left: -15px;
+        }
+
+        .text{
+          margin-left: 10px;
+        }
+
+        .breadcrumb {
+                        margin-top: -24px;
+                        width: 100%;
+                        align-items: center;
+                        display: flex;
+                    }
+
+    .Naslov{
+        font-family: 'Bebas Neue', cursive;
+        color: aliceblue;
+        font-size: 130px;
+        margin-left: 21vw;
+        opacity: 0;
+        transition: 2700ms; 
+    }
+
+    .Naslov.animate{
+        opacity: 1;
+    }
+
+    #Zadnjasekcija{
+        background-color: rgb(24, 24, 24);
+        color: aliceblue;
+    }
+
+    .selector{
+        width: 470px;
+        height: 70px;
+        border-radius: 15px;
+
+    }
+
+    .kofolTekst{
+        margin-top: 5vw;
+        margin-left: 44vw;
+        font-size: 70px;
+        opacity: 0;
+        transition: 3500ms; 
+        color: aliceblue;
+        font-family: 'Roboto Serif', sans-serif;
+    }
+
+    .kofolTekst.animate{
+        opacity: 1;
+        margin-left: 44vw;
+        font-size: 75px;
+    }
+
+    .dugmadi{
+        width: 145px;
+        height: 40px;
+        background-color: rgb(96, 96, 214);
+        color: aliceblue;
+        border: 3px black solid;
+        border-radius: 4px;
+        margin-top: 2vw;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .dugmadi:hover{
+        width: 161px;
+        height: 46px;
+        background-color: aliceblue;
+        color: rgb(96, 96, 214);
+        border: 3px rgb(0, 0, 0) solid;
+        border-radius: 4px;
+        margin-top: 2vw;
+        position: relative;
+    }    
+
+    #Unos{
+        width: 50px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+        border-radius: 20px;
+        height: 56px;
+        margin-left: 650px;
+        margin-top: 50px;
+    }
+
+    #Unos:focus{
+        width: 600px;
+    }
+
+    #DonjaSekcija{
+        background-color: beige;
+    }
+
+    .card {
+  background-color: rgb(252, 248, 248);
+  border-radius: 10px;
+  box-shadow: 20px 20px rgb(10, 10, 10);
+  overflow: hidden;
+  height: 420px;
+  width: 440px;
+  transition: 0.3s;
+  margin: 50px;
+}
+
+.card:hover {
+  box-shadow: 30px 30px black;
+  height: 430px;
+  width: 450px;
+}
+
+.tag {
+  background: #cccccc;
+  border-radius: 50px;
+  font-size: 12px;
+  margin: 0;
+  color: #fff;
+  padding: 2px 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.tag-teal {
+  background-color: #47bcd4;
+}
+.tag-purple {
+  background-color: #5e76bf;
+}
+.tag-pink {
+  background-color: #cd5b9f;
+}
+
+    @media only screen and (max-width:600px){
+        .Naslov{
+        font-family: 'Bebas Neue', cursive;
+        color: aliceblue;
+        font-size: 50px;
+        margin-left: 14vw;
+        opacity: 0;
+        transition: 1700ms; 
+
+        
+    }
+
+    .kofolTekst{
+        margin-top: 5vw;
+        margin-left: 24vw;
+        font-size: 59px;
+        opacity: 0;
+        transition: 3500ms; 
+        color: aliceblue;
+        font-family: 'Roboto Serif', sans-serif;
+    }
+
+    .kofolTekst.animate{
+        opacity: 1;
+        margin-left: 24vw;
+        font-size: 59px;
+    }
+
+    .Kontejneri{
+            background: #3c3957;
+            width: 340px;
+            height: 300px;
+            display: flex;
+            transition: 0.4s;
+            margin: 2px;
+            margin-left: -30px;
+            color: azure;
+            border-radius: 7px;
+            box-shadow: 10px 10px #0d0911;
+            font-size: 10px;
+        }
+
+        .Kontejneri:hover{
+            width: 580px;
+            height: 315px;
+            box-shadow: 25px 25px #0b0611;
+        }
+    }
+
+    .tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+  animation: animacijaZaTab 1s;
+}    
+
+    .tabdugme1{
+      border-radius: 40px 0px 0px 0px; 
+    }
+
+    .tabdugme2{
+      border-radius: 0px 40px 0px 0px; 
+    }
+
+    .tabdugme{
+      width: 170px;
+      height: 60px;
+      background-color: #3c3957;
+      color: white;
+      transition: 0.4s;
+    }
+
+    .tabdugme:hover{
+      background-color: #5f5d79;
+    }
+
+    .tabdugme1.active {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    }
+      .tabdugme2.active {
+        background-color: rgb(255, 255, 255);
+        color: #0b0611;
+      }
+
+
+    .FlexZaDugmadi{
+      display: flex;
+      justify-content: center;
+    }
+
+     /* Fading effect takes 1 second */
+/* Go from zero to full opacity */
+@keyframes animacijaZaTab {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+    </style>
+    </header>
+    
+
+<h1 class="Naslov">Autobuske linije Travnik</h1>
+</div>
+<div class = "FlexZaDugmadi">
+  <button class="tabdugme1 tabdugme" id="Otvoren" onclick="PromijeniTab(event, 'KantonalneLinije')">Kantonalne linije</button>
+  <button class="tabdugme2 tabdugme" onclick="PromijeniTab(event, 'OpstinskeLinije')">Opštinske linije</button>
+</div>
+<h1 class = "kofolTekst">Polasci</h1>
+<div class = "wrapper">
+    <!--Search filter ide ovdje-->
+    <div class="Search">
+		<div class="searchbox">
+			<input id = "input" type="text" class="searchbox__input" onkeyup="filtriraj()" placeholder="Pretraži gradove..." />
+			<svg class="searchbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966">
+				<path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17s-17-7.626-17-17S14.61,6,23.984,6z" />
+			</svg>
+		</div>
+<!--Kantonalne linije-->
+<div id="KantonalneLinije" class="tabcontent">
+  <div class = "fx">
+    <div class="card">
+       <img src="https://media-cdn.tripadvisor.com/media/photo-s/1c/2b/64/4c/donji-vakufe-dji-mavic.jpg" style ="width: 450px; height: 200px;" alt="city" />
+     <div class="card-body">
+       <span class="tag tag-pink">Polasci</span>
+       <h4>
+         <u>Travnik-Donji Vakuf</u>
+       </h4>
+       <p>
+        Istražite polaske iz Travnika prema Donjem Vakufu
+       </p>
+       <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+     </div>
+   </div>
+   <div class="card">
+       <img src="Gornji_Vakuf.jpeg" style ="width: 450px; height: 200px;" alt="city" />
+     <div class="card-body">
+       <span class="tag tag-pink">Polasci</span>
+       <h4>
+         <u>Travnik-Gornji Vakuf</u>
+       </h4>
+       <p>
+        Istražite najbrže...
+       </p>
+       <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+     </div>
+   </div>
+   <div class="card" data-content="Jajce">
+     <img src="https://furaj.ba/wp-content/uploads/2019/06/3-kraljevski-grad.jpg" style ="width: 450px; height: 200px;" alt="city" />
+   <div class="card-body">
+     <span class="tag tag-pink">Polasci</span>
+     <h4>
+       <u>Travnik-Jajce</u>
+     </h4>
+     <p>
+      Istražite najbrže...
+     </p>
+     <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+   </div>
+ </div>
+   <div class="card" data-content="Novi Travnik">
+       <img src="NoviTravnik.png" style ="width: 450px; height: 200px;" alt="city" />
+     <div class="card-body">
+       <span class="tag tag-pink">Polasci</span>
+       <h4>
+         <u>Travnik-Novi Travnik</u>
+       </h4>
+       <p>
+         Istražite polaske iz Travnika prema Novom Travniku
+       </p>
+       <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+     </div>
+   </div>
+   <div class="card">
+     <img src="http://farm8.staticflickr.com/7159/6727023955_8ce4cdd5e5_b.jpg" style ="width: 450px; height: 200px;" alt="city" />
+   <div class="card-body">
+     <span class="tag tag-pink">Polasci</span>
+     <h4>
+       <u>Travnik-Bugojno</u>
+     </h4>
+     <p>
+      Istražite najbrže...
+     </p>
+     <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+   </div>
+ </div>
+   <div class="card">
+       <img src="https://foca-24.info/storage/uploads/2021-09-04/1630760458_izbori-za-clanove-savjeta-mjesnih-zajednica-3-oktobra.jpg" style ="width: 450px; height: 200px;" alt="city" />
+     <div class="card-body">
+       <span class="tag tag-pink">Polasci</span>
+       <h4>
+         <u>Travnik-Vitez</u>
+       </h4>
+       <p>
+        Istražite najbrže...
+       </p>
+       <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+     </div>
+   </div>
+   <div class="card">
+       <img src="https://domaceubih.ba/wp-content/uploads/2020/06/Fojnica3.jpg" style ="width: 450px; height: 200px;" alt="city" />
+     <div class="card-body">
+       <span class="tag tag-pink">Od Polasci</span>
+       <h4>
+         <u>Travnik-Fojnica</u>
+       </h4>
+       <p>
+        Istražite najbrže...
+       </p>
+       <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+     </div>
+   </div>
+   <div class="card">
+     <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Kiseljak_nebo_1.JPG" style ="width: 450px; height: 200px;" alt="city" />
+   <div class="card-body">
+     <span class="tag tag-pink">Od Polasci</span>
+     <h4>
+       <u>Travnik-Kiseljak</u>
+     </h4>
+     <p>
+      Istražite najbrže...
+     </p>
+     <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+   </div>
+ </div>
+ <div class="card">
+   <img src="https://arhiv.stav.ba/wp-content/uploads/2019/05/1.-Otvaranje-Copy.jpg" style ="width: 450px; height: 200px;" alt="city" />
+ <div class="card-body">
+   <span class="tag tag-pink">Od Polasci</span>
+   <h4>
+     <u>Travnik-Busovača</u>
+   </h4>
+   <p>
+    Istražite najbrže...
+   </p>
+   <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+ </div>
+</div>
+</div>
+</div>
+<!--Opstinske linije-->
+<div id="OpstinskeLinije" class="tabcontent">
+  <div class = "fx">
+    <div class="card">
+       <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Vlasic_Turbe_View.jpg" style ="width: 450px; height: 200px;" alt="city" />
+     <div class="card-body">
+       <span class="tag tag-pink">Polasci</span>
+       <h4>
+         <u>Travnik-Turbe</u>
+       </h4>
+       <p>
+        Istražite polaske iz Travnika prema Donjem Vakufu
+       </p>
+       <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+     </div>
+   </div>
+   <div class="card">
+       <img src="Gornji_Vakuf.jpeg" style ="width: 450px; height: 200px;" alt="city" />
+     <div class="card-body">
+       <span class="tag tag-pink">Polasci</span>
+       <h4>
+         <u>Travnik-Goleš</u>
+       </h4>
+       <p>
+        Istražite najbrže...
+       </p>
+       <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+     </div>
+   </div>
+   <div class="card" data-content="Jajce">
+     <img src="https://furaj.ba/wp-content/uploads/2019/06/3-kraljevski-grad.jpg" style ="width: 450px; height: 200px;" alt="city" />
+   <div class="card-body">
+     <span class="tag tag-pink">Polasci</span>
+     <h4>
+       <u>Travnik-Jajce</u>
+     </h4>
+     <p>
+      Istražite najbrže...
+     </p>
+     <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+   </div>
+ </div>
+   <div class="card" data-content="Novi Travnik">
+       <img src="NoviTravnik.png" style ="width: 450px; height: 200px;" alt="city" />
+     <div class="card-body">
+       <span class="tag tag-pink">Polasci</span>
+       <h4>
+         <u>Travnik-Novi Travnik</u>
+       </h4>
+       <p>
+         Istražite polaske iz Travnika prema Novom Travniku
+       </p>
+       <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+     </div>
+   </div>
+   <div class="card">
+     <img src="http://farm8.staticflickr.com/7159/6727023955_8ce4cdd5e5_b.jpg" style ="width: 450px; height: 200px;" alt="city" />
+   <div class="card-body">
+     <span class="tag tag-pink">Polasci</span>
+     <h4>
+       <u>Travnik-Bugojno</u>
+     </h4>
+     <p>
+      Istražite najbrže...
+     </p>
+     <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+   </div>
+ </div>
+   <div class="card">
+       <img src="https://foca-24.info/storage/uploads/2021-09-04/1630760458_izbori-za-clanove-savjeta-mjesnih-zajednica-3-oktobra.jpg" style ="width: 450px; height: 200px;" alt="city" />
+     <div class="card-body">
+       <span class="tag tag-pink">Polasci</span>
+       <h4>
+         <u>Travnik-Vitez</u>
+       </h4>
+       <p>
+        Istražite najbrže...
+       </p>
+       <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+     </div>
+   </div>
+   <div class="card">
+       <img src="https://domaceubih.ba/wp-content/uploads/2020/06/Fojnica3.jpg" style ="width: 450px; height: 200px;" alt="city" />
+     <div class="card-body">
+       <span class="tag tag-pink">Od Polasci</span>
+       <h4>
+         <u>Travnik-Fojnica</u>
+       </h4>
+       <p>
+        Istražite najbrže...
+       </p>
+       <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+     </div>
+   </div>
+   <div class="card">
+     <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Kiseljak_nebo_1.JPG" style ="width: 450px; height: 200px;" alt="city" />
+   <div class="card-body">
+     <span class="tag tag-pink">Od Polasci</span>
+     <h4>
+       <u>Travnik-Kiseljak</u>
+     </h4>
+     <p>
+      Istražite najbrže...
+     </p>
+     <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+   </div>
+ </div>
+ <div class="card">
+   <img src="https://arhiv.stav.ba/wp-content/uploads/2019/05/1.-Otvaranje-Copy.jpg" style ="width: 450px; height: 200px;" alt="city" />
+ <div class="card-body">
+   <span class="tag tag-pink">Od Polasci</span>
+   <h4>
+     <u>Travnik-Busovača</u>
+   </h4>
+   <p>
+    Istražite najbrže...
+   </p>
+   <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+ </div>
+</div>
+</div>
+
+
+</body>
+    <script>
+        //Za animiranje naslova i podnaslova
+    $(document).ready(() => { 
+	$('.kofolTekst').addClass('animate'); 
+});
+
+$(document).ready(() => { 
+	$('.Naslov').addClass('animate'); 
+}); 
+
+//Search filtriranje
+function filtriraj() {
+  var input, radios, radio_filter, text_filter, td0, i, divList;
+  input = document.getElementById("input");
+  text_filter = input.value.toUpperCase();
+  divList = $(".Kontejneri");
+	
+ // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < divList.length; i++) {
+    td0 = divList[i].getAttribute('data-content');
+    if (td0) {
+      if (td0.toUpperCase().indexOf(text_filter) > -1) {
+        divList[i].style.display = "";
+      } else {
+        divList[i].style.display = "none";
+      }
+    } 
+  }
+}
+
+//Za tab sistem
+document.getElementById("Otvoren").click();
+function PromijeniTab(evt, cityName) {
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tabdugme");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+    </script>
+</section>
+</html>
