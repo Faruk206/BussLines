@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/x-icon" href="Slike/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Serif:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "SearchIkonica.css">
+    <link rel = "stylesheet" href = "Index.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AL Travnik</title>
+</head>
+<body>
+    </header>
+<h1 class="Naslov">Autobuske linije Travnik</h1>
+<image src = "Slike/AUTOBUS LINES25.png" id ="NaslovnaSlika"></image>
+</div>
+<!--Tab Switch sistem-->
+<div class = "FlexZaDugmadi">
+  <button class="tabdugme1 tabdugme" id="Otvoren" onclick="PromijeniTab(event, 'KantonalneLinije')">Kantonalne linije</button>
+  <button class="tabdugme2 tabdugme" onclick="PromijeniTab(event, 'OpstinskeLinije')">Opštinske linije</button>
+</div>
+<div class = "Linija"></div>
+<h1 class = "kofolTekst">Polasci</h1>
+<div class = "wrapper">
+    <!--Search filter ide ovdje-->
+    <div class="Search">
+		<div class="searchbox">
+			<input id = "input" type="text" class="searchbox__input" onkeyup="filtriraj()" placeholder="Pretraži gradove..." />
+			<svg class="searchbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.966 56.966">
+				<path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17s-17-7.626-17-17S14.61,6,23.984,6z" />
+			</svg>
+		</div>
+<!--Kantonalne linije-->
+<div id="KantonalneLinije" class="tabcontent">
+  <div class = "fx">
+    <div class="card" data-content="Donji Vakuf">
+       <img src="https://media-cdn.tripadvisor.com/media/photo-s/1c/2b/64/4c/donji-vakufe-dji-mavic.jpg" style ="width: 450px; height: 200px;" alt="city" />
+     <div class="card-body">
+       <span class="tag tag-pink">Polasci</span>
+       <h4>
+         <u>Travnik-Donji Vakuf</u>
+       </h4>
+       <p>
+        Istražite polaske iz Travnika prema Donjem Vakufu
+       </p>
+       <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+     </div>
+   </div>
+   <div class="card" data-content="Gornji Vakuf">
+       <img src="Slike/Gornji_Vakuf.jpeg" style ="width: 450px; height: 200px;" alt="city" />
+     <div class="card-body">
+       <span class="tag tag-pink">Polasci</span>
+       <h4>
+         <u>Travnik-Gornji Vakuf</u>
+       </h4>
+       <p>
+        Istražite najbrže...
+       </p>
+       <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+     </div>
+   </div>
+   <div class="card" data-content="Jajce">
+     <img src="https://furaj.ba/wp-content/uploads/2019/06/3-kraljevski-grad.jpg" style ="width: 450px; height: 200px;" alt="city" />
+   <div class="card-body">
+     <span class="tag tag-pink">Polasci</span>
+     <h4>
+       <u>Travnik-Jajce</u>
+     </h4>
+     <p>
+      Istražite najbrže...
+     </p>
+     <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+   </div>
+ </div>
+   <div class="card" data-content="Novi Travnik">
+       <img src="Slike/NoviTravnik.png" style ="width: 450px; height: 200px;" alt="city" />
+     <div class="card-body">
+       <span class="tag tag-pink">Polasci</span>
+       <h4>
+         <u>Travnik-Novi Travnik</u>
+       </h4>
+       <p>
+         Istražite polaske iz Travnika prema Novom Travniku
+       </p>
+       <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+     </div>
+   </div>
+   <div class="card" data-content="Bugojno">
+     <img src="Slike/Bugojno.png" style ="width: 450px; height: 200px;" alt="city" />
+   <div class="card-body">
+     <span class="tag tag-pink">Polasci</span>
+     <h4>
+       <u>Travnik-Bugojno</u>
+     </h4>
+     <p>
+      Istražite najbrže...
+     </p>
+     <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+   </div>
+ </div>
+   <div class="card" data-content="Vitez">
+       <img src="https://foca-24.info/storage/uploads/2021-09-04/1630760458_izbori-za-clanove-savjeta-mjesnih-zajednica-3-oktobra.jpg" style ="width: 450px; height: 200px;" alt="city" />
+     <div class="card-body">
+       <span class="tag tag-pink">Polasci</span>
+       <h4>
+         <u>Travnik-Vitez</u>
+       </h4>
+       <p>
+        Istražite najbrže...
+       </p>
+       <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+     </div>
+   </div>
+   <div class="card" data-content="Fojnica">
+       <img src="https://domaceubih.ba/wp-content/uploads/2020/06/Fojnica3.jpg" style ="width: 450px; height: 200px;" alt="city" />
+     <div class="card-body">
+       <span class="tag tag-pink">Od Polasci</span>
+       <h4>
+         <u>Travnik-Fojnica</u>
+       </h4>
+       <p>
+        Istražite najbrže...
+       </p>
+       <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+     </div>
+   </div>
+   <div class="card" data-content="Kiseljak">
+     <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Kiseljak_nebo_1.JPG" style ="width: 450px; height: 200px;" alt="city" />
+   <div class="card-body">
+     <span class="tag tag-pink">Od Polasci</span>
+     <h4>
+       <u>Travnik-Kiseljak</u>
+     </h4>
+     <p>
+      Istražite najbrže...
+     </p>
+     <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+   </div>
+ </div>
+ <div class="card" data-content="Busovača">
+   <img src="https://arhiv.stav.ba/wp-content/uploads/2019/05/1.-Otvaranje-Copy.jpg" style ="width: 450px; height: 200px;" alt="city" />
+ <div class="card-body">
+   <span class="tag tag-pink">Od Polasci</span>
+   <h4>
+     <u>Travnik-Busovača</u>
+   </h4>
+   <p>
+    Istražite najbrže...
+   </p>
+   <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+ </div>
+</div>
+</div>
+</div>
+<!--Opstinske linije-->
+<div id="OpstinskeLinije" class="tabcontent">
+  <div class = "fx">
+    <div class="card">
+       <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Vlasic_Turbe_View.jpg" style ="width: 450px; height: 200px;" alt="city" />
+     <div class="card-body">
+       <span class="tag tag-pink">Polasci</span>
+       <h4>
+         <u>Travnik-Turbe</u>
+       </h4>
+       <p>
+        Istražite polaske iz Travnika prema Donjem Vakufu
+       </p>
+       <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+     </div>
+   </div>
+   <div class="card">
+       <img src="Gornji_Vakuf.jpeg" style ="width: 450px; height: 200px;" alt="city" />
+     <div class="card-body">
+       <span class="tag tag-pink">Polasci</span>
+       <h4>
+         <u>Travnik-Goleš</u>
+       </h4>
+       <p>
+        Istražite najbrže...
+       </p>
+       <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+     </div>
+   </div>
+   <div class="card" data-content="Jajce">
+     <img src="https://furaj.ba/wp-content/uploads/2019/06/3-kraljevski-grad.jpg" style ="width: 450px; height: 200px;" alt="city" />
+   <div class="card-body">
+     <span class="tag tag-pink">Polasci</span>
+     <h4>
+       <u>Travnik-Jajce</u>
+     </h4>
+     <p>
+      Istražite najbrže...
+     </p>
+     <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+   </div>
+ </div>
+   <div class="card" data-content="Novi Travnik">
+       <img src="NoviTravnik.png" style ="width: 450px; height: 200px;" alt="city" />
+     <div class="card-body">
+       <span class="tag tag-pink">Polasci</span>
+       <h4>
+         <u>Travnik-Novi Travnik</u>
+       </h4>
+       <p>
+         Istražite polaske iz Travnika prema Novom Travniku
+       </p>
+       <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+     </div>
+   </div>
+   <div class="card">
+     <img src="http://farm8.staticflickr.com/7159/6727023955_8ce4cdd5e5_b.jpg" style ="width: 450px; height: 200px;" alt="city" />
+   <div class="card-body">
+     <span class="tag tag-pink">Polasci</span>
+     <h4>
+       <u>Travnik-Bugojno</u>
+     </h4>
+     <p>
+      Istražite najbrže...
+     </p>
+     <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+   </div>
+ </div>
+   <div class="card">
+       <img src="https://foca-24.info/storage/uploads/2021-09-04/1630760458_izbori-za-clanove-savjeta-mjesnih-zajednica-3-oktobra.jpg" style ="width: 450px; height: 200px;" alt="city" />
+     <div class="card-body">
+       <span class="tag tag-pink">Polasci</span>
+       <h4>
+         <u>Travnik-Vitez</u>
+       </h4>
+       <p>
+        Istražite najbrže...
+       </p>
+       <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+     </div>
+   </div>
+   <div class="card">
+       <img src="https://domaceubih.ba/wp-content/uploads/2020/06/Fojnica3.jpg" style ="width: 450px; height: 200px;" alt="city" />
+     <div class="card-body">
+       <span class="tag tag-pink">Od Polasci</span>
+       <h4>
+         <u>Travnik-Fojnica</u>
+       </h4>
+       <p>
+        Istražite najbrže...
+       </p>
+       <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+     </div>
+   </div>
+   <div class="card">
+     <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Kiseljak_nebo_1.JPG" style ="width: 450px; height: 200px;" alt="city" />
+   <div class="card-body">
+     <span class="tag tag-pink">Od Polasci</span>
+     <h4>
+       <u>Travnik-Kiseljak</u>
+     </h4>
+     <p>
+      Istražite najbrže...
+     </p>
+     <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+   </div>
+ </div>
+ <div class="card">
+   <img src="https://arhiv.stav.ba/wp-content/uploads/2019/05/1.-Otvaranje-Copy.jpg" style ="width: 450px; height: 200px;" alt="city" />
+ <div class="card-body">
+   <span class="tag tag-pink">Od Polasci</span>
+   <h4>
+     <u>Travnik-Busovača</u>
+   </h4>
+   <p>
+    Istražite najbrže...
+   </p>
+   <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+ </div>
+</div>
+</div>
+
+
+</body>
+    <script src="Index.js"></script>
+</section>
+</html>
