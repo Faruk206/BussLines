@@ -1,7 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100&display=swap');
+
 .Naslov{
-  font-family: 'Bebas Neue', cursive;
+  font-family: CustomFont, cursive;
   color: aliceblue;
   font-size: 160px;
   margin-left: 17vw;
   transition: 2700ms; 
   }
+
+  @font-face {
+    font-family: CustomFont;
+    src: url(BebasNeue-Regular.ttf);
+  }
+
+  .tabdugme1{
+    border-radius: 40px 0px 0px 0px; 
+    }
+    
+    .tabdugme2{
+    border-radius: 0px 40px 0px 0px; 
+    }
+    
+    .tabdugme{
+    width: 180px;
+    height: 70px;
+    background-color: #3c3957;
+    color: white;
+    transition: 0.4s;
+    font-size: 20px;
+    }
+    
+    .tabdugme:hover{
+    background-color: #6b6b80;
+    border: 2px #343150;
+    }
+    
+    .tabdugme1.active {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    }
+    .tabdugme2.active {
+    background-color: rgb(255, 255, 255);
+    color: #0b0611;
+    }
+
+    .FlexZaDugmadi{
+      display: flex;
+      justify-content: center;
+      }    
+
+      .kofolTekst{
+        margin-top: 5vw;
+        margin-left: 44vw;
+        font-size: 70px;
+        opacity: 1;
+        transition: 3500ms; 
+        color: aliceblue;
+        font-family: 'Roboto Serif', sans-serif;
+        }
+        
+    
