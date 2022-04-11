@@ -157,12 +157,7 @@ padding: 2px 10px;
 text-transform: uppercase;
 cursor: pointer;
 }
-.tag-teal {
-background-color: #47bcd4;
-}
-.tag-purple {
-background-color: #5e76bf;
-}
+
 .tag-pink {
 background-color: #cd5b9f;
 }
