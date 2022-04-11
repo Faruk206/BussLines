@@ -1,19 +1,19 @@
 import './App.css';
 import './Searchikonica.css'
 
-function Kartica(dataContent, slika, Linija) {
+function Kartica(prop) {
   return (
-    <div class="card" dataContent="{dataContent}">
-        <img src={slika} class = "KartaSlika" alt="city"/>
-            <div class="card-body">
-                <span class="tag tag-pink">Polasci</span>
-                <h4>
-                <u>{Linija}</u>
-                </h4>
+    <div className="card">
+        <img src={prop.slika} className = "KartaSlika" alt="city"/>
+            <div className="card-body">
+                <span className="tag tag-pink">Polasci</span>
+                <h2>
+                <u>{prop.Linija}</u>
+                </h2>
                 <p>
                 Istražite najbrže...
                 </p>
-            <a href = "Sljedeca.html"><button class = "dugmadi">Provjeri</button></a>
+            <a href = "Sljedeca.html"><button className = "dugmadi">Provjeri</button></a>
         </div>
     </div>
   );
