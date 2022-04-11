@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100&display=swap');
 
+body{
+  background: #22223a;
+}
+
 .Naslov{
   font-family: CustomFont, cursive;
   color: aliceblue;
@@ -74,6 +78,10 @@
   transition: 0.3s;
   margin: 50px;
   }
+
+.card-body{
+  margin: 5px;
+}  
 
   .card:hover {
     box-shadow: 30px 30px black;
